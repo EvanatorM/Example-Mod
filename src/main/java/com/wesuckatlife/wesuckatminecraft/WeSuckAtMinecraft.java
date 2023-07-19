@@ -1,6 +1,7 @@
 package com.wesuckatlife.wesuckatminecraft;
 
 import com.mojang.logging.LogUtils;
+import com.wesuckatlife.wesuckatminecraft.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,8 @@ public class WeSuckAtMinecraft
     public WeSuckAtMinecraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
