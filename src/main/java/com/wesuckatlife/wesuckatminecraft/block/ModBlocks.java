@@ -1,6 +1,8 @@
 package com.wesuckatlife.wesuckatminecraft.block;
 
 import com.wesuckatlife.wesuckatminecraft.WeSuckAtMinecraft;
+import com.wesuckatlife.wesuckatminecraft.block.custom.AsphaltBlock;
+import com.wesuckatlife.wesuckatminecraft.block.custom.RubyLampBlock;
 import com.wesuckatlife.wesuckatminecraft.item.ModCreativeModeTab;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -36,6 +38,14 @@ public class ModBlocks
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4.5f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)), ModCreativeModeTab.WSAM_TAB);
+
+    public static final RegistryObject<Block> ASPHALT_BLOCK = registerBlock("asphalt_block",
+            () -> new AsphaltBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.WSAM_TAB);
+
+    public static final RegistryObject<Block> RUBY_LAMP = registerBlock("ruby_lamp",
+            () -> new RubyLampBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(2f)
+                    .lightLevel(state -> state.getValue(RubyLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.WSAM_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {

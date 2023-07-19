@@ -6,6 +6,8 @@
   "block.wesuckatminecraft.ruby_block": "Block of Ruby",
   "block.wesuckatminecraft.ruby_ore": "Ruby Ore",
   "block.wesuckatminecraft.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.wesuckatminecraft.asphalt_block": "Asphalt Block",
+  "block.wesuckatminecraft.ruby_lamp": "Ruby Lamp",
 
   "itemGroup.wsamtab": "WeSuckAtMinecraft"
 }

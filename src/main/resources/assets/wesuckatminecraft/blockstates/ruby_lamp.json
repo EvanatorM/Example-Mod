@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "wesuckatminecraft:block/ruby_lamp_on" },
+    "lit=false": { "model": "wesuckatminecraft:block/ruby_lamp_off" }
+  }
+}
