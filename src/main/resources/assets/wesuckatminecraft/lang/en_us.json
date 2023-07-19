@@ -1,5 +1,9 @@
 {
   "item.wesuckatminecraft.ruby": "Ruby",
 
+  "block.wesuckatminecraft.ruby_block": "Block of Ruby",
+  "block.wesuckatminecraft.ruby_ore": "Ruby Ore",
+  "block.wesuckatminecraft.deepslate_ruby_ore": "Deepslate Ruby Ore",
+
   "itemGroup.wsamtab": "WeSuckAtMinecraft"
 }
