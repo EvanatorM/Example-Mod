@@ -1,6 +1,9 @@
 {
   "item.wesuckatminecraft.ruby": "Ruby",
+  "item.wesuckatminecraft.blueberry_seeds": "Blueberry Seeds",
+  "item.wesuckatminecraft.blueberry": "Blueberry",
   "item.wesuckatminecraft.eight_ball": "Eight Ball",
+
   "item.wesuckatminecraft.snowball_cannon": "Snowball Cannon",
 
   "block.wesuckatminecraft.ruby_block": "Block of Ruby",
@@ -8,6 +11,8 @@
   "block.wesuckatminecraft.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.wesuckatminecraft.asphalt_block": "Asphalt Block",
   "block.wesuckatminecraft.ruby_lamp": "Ruby Lamp",
+
+  "block.wesuckatminecraft.blueberry_crop": "Blueberry Crop",
 
   "itemGroup.wsamtab": "WeSuckAtMinecraft"
 }

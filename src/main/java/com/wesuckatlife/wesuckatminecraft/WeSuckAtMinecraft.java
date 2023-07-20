@@ -3,6 +3,8 @@ package com.wesuckatlife.wesuckatminecraft;
 import com.mojang.logging.LogUtils;
 import com.wesuckatlife.wesuckatminecraft.block.ModBlocks;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

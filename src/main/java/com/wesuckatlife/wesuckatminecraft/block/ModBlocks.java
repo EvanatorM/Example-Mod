@@ -2,6 +2,7 @@ package com.wesuckatlife.wesuckatminecraft.block;
 
 import com.wesuckatlife.wesuckatminecraft.WeSuckAtMinecraft;
 import com.wesuckatlife.wesuckatminecraft.block.custom.AsphaltBlock;
+import com.wesuckatlife.wesuckatminecraft.block.custom.BlueberryCropBlock;
 import com.wesuckatlife.wesuckatminecraft.block.custom.RubyLampBlock;
 import com.wesuckatlife.wesuckatminecraft.item.ModCreativeModeTab;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -46,6 +48,9 @@ public class ModBlocks
     public static final RegistryObject<Block> RUBY_LAMP = registerBlock("ruby_lamp",
             () -> new RubyLampBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(2f)
                     .lightLevel(state -> state.getValue(RubyLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.WSAM_TAB);
+
+    public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
