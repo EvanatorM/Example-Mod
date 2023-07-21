@@ -3,6 +3,7 @@ package com.wesuckatlife.wesuckatminecraft;
 import com.mojang.logging.LogUtils;
 import com.wesuckatlife.wesuckatminecraft.block.ModBlocks;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
+import com.wesuckatlife.wesuckatminecraft.painting.ModPaintings;
 import com.wesuckatlife.wesuckatminecraft.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -29,6 +30,7 @@ public class WeSuckAtMinecraft
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         ModVillagers.register(modEventBus);
 
