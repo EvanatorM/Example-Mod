@@ -14,5 +14,7 @@
 
   "block.wesuckatminecraft.blueberry_crop": "Blueberry Crop",
 
-  "itemGroup.wsamtab": "WeSuckAtMinecraft"
+  "itemGroup.wsamtab": "WeSuckAtMinecraft",
+
+  "entity.minecraft.villager.wesuckatminecraft.ruby_trader": "Ruby Trader"
 }
