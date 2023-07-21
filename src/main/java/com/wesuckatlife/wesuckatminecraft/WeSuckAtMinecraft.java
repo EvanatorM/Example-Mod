@@ -5,6 +5,8 @@ import com.wesuckatlife.wesuckatminecraft.block.ModBlocks;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
 import com.wesuckatlife.wesuckatminecraft.painting.ModPaintings;
 import com.wesuckatlife.wesuckatminecraft.villager.ModVillagers;
+import com.wesuckatlife.wesuckatminecraft.world.feature.ModConfiguredFeatures;
+import com.wesuckatlife.wesuckatminecraft.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -33,6 +35,9 @@ public class WeSuckAtMinecraft
         ModPaintings.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
