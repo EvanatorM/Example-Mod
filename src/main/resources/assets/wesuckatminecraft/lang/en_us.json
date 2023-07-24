@@ -16,5 +16,11 @@
 
   "itemGroup.wsamtab": "WeSuckAtMinecraft",
 
-  "entity.minecraft.villager.wesuckatminecraft.ruby_trader": "Ruby Trader"
+  "entity.minecraft.villager.wesuckatminecraft.ruby_trader": "Ruby Trader",
+
+  "key.category.wesuckatminecraft.tutorial": "Tutorial",
+  "key.wesuckatminecraft.drink_water": "Drink Water",
+
+  "message.wesuckatminecraft.drink_water": "Drinking Water",
+  "message.wesuckatminecraft.no_water": "No Water Nearby!"
 }

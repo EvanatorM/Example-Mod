@@ -3,6 +3,7 @@ package com.wesuckatlife.wesuckatminecraft;
 import com.mojang.logging.LogUtils;
 import com.wesuckatlife.wesuckatminecraft.block.ModBlocks;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
+import com.wesuckatlife.wesuckatminecraft.networking.ModMessages;
 import com.wesuckatlife.wesuckatminecraft.painting.ModPaintings;
 import com.wesuckatlife.wesuckatminecraft.villager.ModVillagers;
 import com.wesuckatlife.wesuckatminecraft.world.feature.ModConfiguredFeatures;
@@ -47,8 +48,10 @@ public class WeSuckAtMinecraft
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
+            ModMessages.register();
             ModVillagers.registerPOIs();
         });
+
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
