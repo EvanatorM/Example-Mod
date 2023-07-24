@@ -1,5 +1,7 @@
 package com.wesuckatlife.wesuckatminecraft.networking.packet;
 
+import com.wesuckatlife.wesuckatminecraft.thirst.PlayerThirst;
+import com.wesuckatlife.wesuckatminecraft.thirst.PlayerThirstProvider;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -53,7 +55,13 @@ public class DrinkWaterC2SPacket
                         0.5f, level.random.nextFloat() * .1f + .9f);
 
                 // Increase the water level / thirst level of player
+                player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
+                    thirst.addThirst(1);
+                    player.sendSystemMessage(Component.literal("Current Thirst " + thirst.getThirst())
+                            .withStyle(ChatFormatting.DARK_AQUA));
+                });
                 // Output the current thirst level
+
             }
             else
             {
@@ -61,6 +69,10 @@ public class DrinkWaterC2SPacket
                 player.sendSystemMessage(Component.translatable(MESSAGE_NO_WATER).withStyle(ChatFormatting.RED));
 
                 // Output the current thirst level
+                player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
+                    player.sendSystemMessage(Component.literal("Current Thirst " + thirst.getThirst())
+                            .withStyle(ChatFormatting.DARK_AQUA));
+                });
             }
         });
         return true;
