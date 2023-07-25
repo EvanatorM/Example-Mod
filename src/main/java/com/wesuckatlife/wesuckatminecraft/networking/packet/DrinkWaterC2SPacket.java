@@ -1,5 +1,6 @@
 package com.wesuckatlife.wesuckatminecraft.networking.packet;
 
+import com.wesuckatlife.wesuckatminecraft.networking.ModMessages;
 import com.wesuckatlife.wesuckatminecraft.thirst.PlayerThirst;
 import com.wesuckatlife.wesuckatminecraft.thirst.PlayerThirstProvider;
 import net.minecraft.ChatFormatting;
@@ -59,6 +60,7 @@ public class DrinkWaterC2SPacket
                     thirst.addThirst(1);
                     player.sendSystemMessage(Component.literal("Current Thirst " + thirst.getThirst())
                             .withStyle(ChatFormatting.DARK_AQUA));
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
                 });
                 // Output the current thirst level
 
@@ -72,6 +74,7 @@ public class DrinkWaterC2SPacket
                 player.getCapability(PlayerThirstProvider.PLAYER_THIRST).ifPresent(thirst -> {
                     player.sendSystemMessage(Component.literal("Current Thirst " + thirst.getThirst())
                             .withStyle(ChatFormatting.DARK_AQUA));
+                    ModMessages.sendToPlayer(new ThirstDataSyncS2CPacket(thirst.getThirst()), player);
                 });
             }
         });

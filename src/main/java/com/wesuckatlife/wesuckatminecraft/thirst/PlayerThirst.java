@@ -13,6 +13,7 @@ public class PlayerThirst
         return thirst;
     }
 
+    // It would probably be better to sync between server and client here. It's more organized that way.
     public void addThirst(int add)
     {
         this.thirst = Math.min(thirst + add, MAX_THIRST);
