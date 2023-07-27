@@ -3,6 +3,7 @@ package com.wesuckatlife.wesuckatminecraft.block;
 import com.wesuckatlife.wesuckatminecraft.WeSuckAtMinecraft;
 import com.wesuckatlife.wesuckatminecraft.block.custom.AsphaltBlock;
 import com.wesuckatlife.wesuckatminecraft.block.custom.BlueberryCropBlock;
+import com.wesuckatlife.wesuckatminecraft.block.custom.GemInfusingStationBlock;
 import com.wesuckatlife.wesuckatminecraft.block.custom.RubyLampBlock;
 import com.wesuckatlife.wesuckatminecraft.item.ModCreativeModeTab;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
@@ -51,6 +52,10 @@ public class ModBlocks
 
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
+            () -> new GemInfusingStationBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.WSAM_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {

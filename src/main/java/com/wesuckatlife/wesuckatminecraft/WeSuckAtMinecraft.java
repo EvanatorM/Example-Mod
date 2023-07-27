@@ -2,12 +2,16 @@ package com.wesuckatlife.wesuckatminecraft;
 
 import com.mojang.logging.LogUtils;
 import com.wesuckatlife.wesuckatminecraft.block.ModBlocks;
+import com.wesuckatlife.wesuckatminecraft.block.entity.ModBlockEntities;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
 import com.wesuckatlife.wesuckatminecraft.networking.ModMessages;
 import com.wesuckatlife.wesuckatminecraft.painting.ModPaintings;
+import com.wesuckatlife.wesuckatminecraft.screen.GemInfusingStationScreen;
+import com.wesuckatlife.wesuckatminecraft.screen.ModMenuTypes;
 import com.wesuckatlife.wesuckatminecraft.villager.ModVillagers;
 import com.wesuckatlife.wesuckatminecraft.world.feature.ModConfiguredFeatures;
 import com.wesuckatlife.wesuckatminecraft.world.feature.ModPlacedFeatures;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -40,6 +44,9 @@ public class WeSuckAtMinecraft
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -61,7 +68,7 @@ public class WeSuckAtMinecraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            MenuScreens.register(ModMenuTypes.GEM_INFUSING_STATOIN_MENU.get(), GemInfusingStationScreen::new);
         }
     }
 }
