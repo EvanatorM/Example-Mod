@@ -1,0 +1,11 @@
+{
+  "type": "wesuckatminecraft:gem_infusing",
+  "ingredients": [
+    {
+      "item": "wesuckatminecraft:ruby"
+    }
+  ],
+  "output": {
+    "item": "wesuckatminecraft:asphalt_block"
+  }
+}

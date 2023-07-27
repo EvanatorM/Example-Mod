@@ -6,6 +6,7 @@ import com.wesuckatlife.wesuckatminecraft.block.entity.ModBlockEntities;
 import com.wesuckatlife.wesuckatminecraft.item.ModItems;
 import com.wesuckatlife.wesuckatminecraft.networking.ModMessages;
 import com.wesuckatlife.wesuckatminecraft.painting.ModPaintings;
+import com.wesuckatlife.wesuckatminecraft.recipe.ModRecipes;
 import com.wesuckatlife.wesuckatminecraft.screen.GemInfusingStationScreen;
 import com.wesuckatlife.wesuckatminecraft.screen.ModMenuTypes;
 import com.wesuckatlife.wesuckatminecraft.villager.ModVillagers;
@@ -46,6 +47,8 @@ public class WeSuckAtMinecraft
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
